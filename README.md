@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Get Started
+
+- Install [NodeJS](https://nodejs.org/en/) & [Git](https://git-scm.com/)
+- Install yarn globally `npm  install -g yarn`
+- Install create-react-app globally `npm install -g create-react-app`
+- Clone the project `git clone https://github.com/batchu/elysian-web`
+
+
+## Essential GIT commands
+
+- Add, Commit & Push - `git add -am "message" && git push`
+
 ## Available Scripts
 
 In the project directory, you can run:
