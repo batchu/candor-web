@@ -3,14 +3,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Get Started
 
 - Install [NodeJS](https://nodejs.org/en/) & [Git](https://git-scm.com/)
-- Install yarn globally `npm  install -g yarn`
-- Install create-react-app globally `npm install -g create-react-app`
-- Clone the project `git clone https://github.com/batchu/elysian-web`
+- Optional - Install yarn globally `npm  install -g yarn`
+- Clone the project `git clone https://github.com/batchu/elysian-web` and `cd elysian-web`
+- Run the command in elysian-web folder `npm install`
+- Start the project 'yarn start`, open http://localhost:3000 on your browser
 
 
 ## Essential GIT commands
 
 - Add, Commit & Push - `git add -am "message" && git push`
+- Reset git reset
 
 ## Available Scripts
 
