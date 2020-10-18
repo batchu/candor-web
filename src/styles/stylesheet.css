@@ -33,6 +33,19 @@ h1{
     width: calc(100% + 4rem);
     margin: -2rem 0rem 0rem -2rem;
 }
+.button-container{
+    display:flex;
+    justify-content: center;
+}
+.remove-button {
+    color: red;
+    font-size: 1.5rem;
+    border: 2px solid #e6d5d5;
+    flex-basis: 48%;
+    padding:5px;
+    line-height:2;
+    
+}
 @font-face{
     font-family: 'billabong';
     src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.ttf")

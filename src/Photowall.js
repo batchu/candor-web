@@ -7,7 +7,7 @@ class Photowall extends Component{
             //The map function needs to "do something" on each of the array elements
         return <div class="photo-grid">
             {this.props.posts.map(
-             (post,index) => <Photo post={post} key={index} /> 
+             (p,index) => <Photo onRemovePhoto={this.props.onRemovePhoto} post={p} key={index} /> 
                
             )}
         </div>
