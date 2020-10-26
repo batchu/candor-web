@@ -6,8 +6,21 @@ class Main extends Component{
     constructor(){
         
         super()
+        const referenceToOurParent = this
         //We are re assigning the this.removephoto by creating a copy of the previous this.removephoto and rewiring the 'this' keyword
-        this.removePhoto = this.removePhoto.bind(this)
+        this.onRemovePhoto = onRemovePhoto.bind(this)
+
+        function onRemovePhoto(postRemoved){
+            //id =0
+            console.log(`Removing the photo with the description ${postRemoved.description}`)
+            this.setState(
+                (state)=>(
+                    {
+                        posts: state.posts.filter(post=> post.id !== postRemoved.id)
+                    }
+                )
+            )
+        }
         /*
         obj = {
             k1:{
@@ -47,24 +60,14 @@ class Main extends Component{
         }
     }
 //Assuming the argument to this to
-    removePhoto(postRemoved){
-        //id =0
-        console.log(`Removing the photo with the description ${postRemoved.description}`)
-        this.setState(
-            (state)=>(
-                {
-                    posts: state.posts.filter(post=> post.id !== postRemoved.id)
-                }
-            )
-        )
-    }
+    
 
     render(){
        
      
         return <div>
             <Title />
-            <Photowall posts={this.state.posts} onRemovePhoto ={this.removePhoto}/>
+            <Photowall posts={this.state.posts} onRemovePhoto ={this.onRemovePhoto}/>
             </div>
     }
 

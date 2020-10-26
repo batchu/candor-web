@@ -15,3 +15,7 @@ class Photowall extends Component{
 }
 
 export default Photowall
+
+/*
+Main -> PhotoWall - Photo1, Photo2, Photo3, Photo4
+*/
