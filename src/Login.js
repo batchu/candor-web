@@ -1,5 +1,5 @@
 import React from 'react'
-import Fb from './Fb'
+import FB from './FB'
 import Google from './Google'
 
 export default Login;
