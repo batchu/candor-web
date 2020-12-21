@@ -1,39 +1,23 @@
 import  React, {Component} from 'react'
 import Title from './Title'
 import Photowall from './Photowall'
+import AddPhoto from './AddPhoto'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+  } from "react-router-dom";
+
 class Main extends Component{
 
     constructor(){
-        
+
         super()
         const referenceToOurParent = this
         //We are re assigning the this.removephoto by creating a copy of the previous this.removephoto and rewiring the 'this' keyword
-        this.onRemovePhoto = onRemovePhoto.bind(this)
-
-        function onRemovePhoto(postRemoved){
-            //id =0
-            console.log(`Removing the photo with the description ${postRemoved.description}`)
-            this.setState(
-                (state)=>(
-                    {
-                        posts: state.posts.filter(post=> post.id !== postRemoved.id)
-                    }
-                )
-            )
-        }
-        /*
-        obj = {
-            k1:{
-                k11:v11,
-                k12:v12,
-                k13:{
-                    k131:v131,
-                    k132:[1,2,3,4,5,6]
-                }
-            },
-            k2:v2
-        }
-        */
+        this.onRemovePhoto = this.onRemovePhoto.bind(this)
+        this.onAddPhoto = this.onAddPhoto.bind(this)
+        
         this.state ={
              posts: [
                 {
@@ -56,19 +40,57 @@ class Main extends Component{
                     description: 'Waterfall',
                     imageLink: 'https://www.treehugger.com/thmb/SOpDZSvikfySQ0Vf2BNzDF0Q8Mk=/889x667/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2017__04__Ban-Gioc-Detian-Falls-Greenery-Jungle-Forest-9391cfc25be640fe8609f94d92c7a3c8.jpg'
                 }
-            ]
+            ],
+            screen: 'photos'
         }
     }
 //Assuming the argument to this to
     
+onAddPhoto(e){
+    console.log(e.target.elements.link.name)
+const newPhoto = {
+    id:0,
+    description:e.target.elements.link.value,
+    imageLink: e.target.elements.description.value
+}
+    this.setState(
+        (state)=>(
+            {
+                posts: [... state.posts, newPhoto]
+            }
+        )
+    )
+          e.preventDefault()
+      }
+  onRemovePhoto(postRemoved){
+    //id =0
+    console.log(`Removing the photo with the description ${postRemoved.description}`)
+    this.setState(
+        (state)=>(
+            {
+                posts: state.posts.filter(post=> post.id !== postRemoved.id)
+            }
+        )
+    )
+}
 
     render(){
        
      
-        return <div>
-            <Title />
-            <Photowall posts={this.state.posts} onRemovePhoto ={this.onRemovePhoto}/>
-            </div>
+        return   <Router>
+      <div>
+      <Title />
+        <Switch>
+        <Route path="/AddPhoto">
+          <AddPhoto />
+          </Route>
+          <Route path="/">
+          <Photowall posts={this.state.posts} onRemovePhoto ={this.onRemovePhoto}/>
+          </Route>
+         
+        </Switch>
+      </div>
+    </Router>
     }
 
 }
