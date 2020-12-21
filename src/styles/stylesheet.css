@@ -1,1 +1,15 @@
+h1 {
+    text-align: center;
+}
 
+.loginButtons{
+    text-align: center;
+    flex: 1;
+    flex-direction: row;
+    
+
+}
+
+.fbButton{
+    border-style: solid;
+}
