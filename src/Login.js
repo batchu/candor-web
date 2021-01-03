@@ -6,13 +6,17 @@ class Login extends React.Component {
 
     render (){
 
-        return <div>
-            <h1>Register/Login</h1>
-            <div className="loginButtons">
-            <div className="fbButton">Facebook</div>
-            <div className="googleButton">Google</div>
-            </div>
-        </div>
+        return <form>
+        <h3>Login</h3>
+
+        <button class="loginBtn loginBtn--facebook">
+  Login with Facebook
+</button>
+
+<button class="loginBtn loginBtn--google">
+  Login with Google
+</button>
+    </form>
     }
 }
 
