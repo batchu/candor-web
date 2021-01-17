@@ -9,9 +9,12 @@ Link} from 'react-router-dom'
 
 class App extends React.Component{
 
+  add(x,y){
+    return x+y
+  }
     render(){
         return <Router>
-            <div className="App">
+            <div className="app">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
           <Link className="navbar-brand" to={"/login"}>Candor</Link>
