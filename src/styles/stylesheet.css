@@ -61,39 +61,35 @@ button {
 }
 
 .form {
-background-color: white;
-max-width: 360px;
-margin:0 auto;
-padding: 45px;
-text-align:center;
+    width: 360px;
+    margin: 0 auto;
+    text-align: center;
+    background-color:white;
+    padding: 45px;
 
 }
-.form input {
-    font-family: sans-serif;
-    background: #f2f2f2;
+.form input{
     width: 100%;
-    border: none;
     padding: 15px;
+    margin: 0 0 15px;
+    border: none;
+    font-family: sans-serif;
     box-sizing: border-box;
-    font-size: 14px;
-    margin: 0 0  15px;
+    background: #f2f2f2;
+}
+.form button{
+    width: 100%;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    background: #065784;
+    cursor:pointer;
+
+}
+.form button:hover{
+    background: #7b8589;
 }
 
-.form button {
-    font-family: sans-serif;
-    text-transform: uppercase;
-    background: #065784;
-    width: 100%;
-    border: none;
-    padding: 15px;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    
-}
-.form button:hover {
-background: #7b8589;
-}
 button:hover {
-border-color: blue;
-}
+    border-color: blue;
+    }

@@ -7,7 +7,7 @@ class Photowall extends Component{
             //The map function needs to "do something" on each of the array elements
         return <div>
             <a href="/AddPhoto" className="addIcon"></a>
-            <div class="photo-grid">
+            <div className="photo-grid">
             {this.props.posts.map(
              (p,index) => <Photo onRemovePhoto={this.props.onRemovePhoto} post={p} key={index} /> 
                

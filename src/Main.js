@@ -46,21 +46,21 @@ class Main extends Component{
     }
 //Assuming the argument to this to
     
-onAddPhoto(e){
-    console.log(e.target.elements.link.name)
+onAddPhoto(link,description){
+
 const newPhoto = {
     id:0,
-    description:e.target.elements.link.value,
-    imageLink: e.target.elements.description.value
+    description:description,
+    imageLink: link
 }
     this.setState(
         (state)=>(
             {
-                posts: [... state.posts, newPhoto]
+                posts: state.posts.concat([newPhoto])
             }
         )
     )
-          e.preventDefault()
+          
       }
   onRemovePhoto(postRemoved){
     //id =0
@@ -81,8 +81,8 @@ const newPhoto = {
       <div>
       <Title />
         <Switch>
-        <Route path="/AddPhoto">
-          <AddPhoto />
+        <Route  path="/AddPhoto">
+          <AddPhoto onAddPhoto = {this.onAddPhoto} />
           </Route>
           <Route path="/">
           <Photowall posts={this.state.posts} onRemovePhoto ={this.onRemovePhoto}/>
