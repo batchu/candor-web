@@ -99,18 +99,22 @@ table {
   
  th {
     border: 1px solid #110101;
-    text-align: left;
+    text-align: center;
     padding: 8px;
     background-color:darkseagreen;
   }
- td {
+ td.content{
+     width:80%;
     border: 1px solid #0f0000;
     text-align: left;
-    padding: 8px;
+    
   }
+.editIcon {
+   text-align:right;
+}
 
-  tr:nth-child(even) {
-    background-color:lightgrey
+  tr:hover{
+      background-color: #f2eeed;
   }
  
  
