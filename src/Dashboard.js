@@ -1,5 +1,6 @@
 import React from 'react'
 import Issue from './Issue'
+import IssueList from './IssueList'
 import Button from 'react-bootstrap/Button';
 
 class Dashboard extends React.Component{
@@ -9,9 +10,8 @@ class Dashboard extends React.Component{
             <Button className="glyphicon glyphicon-cogwheel settingsIcon" >
             
                 </Button>
-            
-
-            <h3>No issues to display!</h3>
+        
+            <IssueList />
             <Button  className="glyphicon glyphicon-circle-empty-plus newIssue" />
            
         

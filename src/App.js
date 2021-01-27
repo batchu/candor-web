@@ -28,13 +28,13 @@ class App extends React.Component{
       <div className="auth-wrapper">
         <div className="auth-inner">
         <Switch>
-                <Route path="login">
+                <Route path="/login">
                     <Login />
                 </Route>
                 <Route path="/dashboard">
                     <Dashboard />
                 </Route>
-                <Route path="">
+                <Route path="/">
                     <Login />
                 </Route>
             </Switch>
