@@ -11,9 +11,15 @@ class AddPhoto extends React.Component{
         e.preventDefault()
         const link = e.target.elements.link.value
         const description = e.target.elements.description.value
-        this.props.onAddPhoto(link, description)
-        this.props.history.push("/")
-       
+        const post = {
+            id:Number(new Date()),
+            description:description,
+            imageLink: link
+        }
+        if(link && description){
+            this.props.onAddPhoto(post)
+
+        }
         
     }
     render(){

@@ -1,6 +1,6 @@
 import  React, {Component} from 'react'
 import Title from './Title'
-import Photowall from './Photowall'
+import PhotoWall from './PhotoWall'
 import AddPhoto from './AddPhoto'
 import {
     BrowserRouter as Router,
@@ -13,11 +13,8 @@ class Main extends Component{
     constructor(){
 
         super()
-        const referenceToOurParent = this
-        //We are re assigning the this.removephoto by creating a copy of the previous this.removephoto and rewiring the 'this' keyword
         this.onRemovePhoto = this.onRemovePhoto.bind(this)
-        this.onAddPhoto = this.onAddPhoto.bind(this)
-        
+       
         this.state ={
              posts: [
                 {
@@ -46,17 +43,11 @@ class Main extends Component{
     }
 //Assuming the argument to this to
     
-onAddPhoto(link,description){
-
-const newPhoto = {
-    id:0,
-    description:description,
-    imageLink: link
-}
+onAddPhoto(post){
     this.setState(
         (state)=>(
             {
-                posts: state.posts.concat([newPhoto])
+                posts: state.posts.concat([post])
             }
         )
     )
@@ -81,12 +72,24 @@ const newPhoto = {
       <div>
       <Title />
         <Switch>
-        <Route  path="/AddPhoto">
-          <AddPhoto onAddPhoto = {this.onAddPhoto} />
-          </Route>
-          <Route path="/">
-          <Photowall posts={this.state.posts} onRemovePhoto ={this.onRemovePhoto}/>
-          </Route>
+        <Route  path="/AddPhoto" 
+        render = {
+            ({history})=>(
+              
+                    <AddPhoto onAddPhoto = {(post)=> {
+                        this.onAddPhoto(post)
+                        history.push('/')
+                    }} />
+                
+            )
+        }/>
+          <Route path="/" 
+          render = {
+              ()=>(
+                <PhotoWall posts={this.state.posts} onRemovePhoto ={this.onRemovePhoto}/>
+              )
+          }
+          />
          
         </Switch>
       </div>
