@@ -9,7 +9,9 @@ class Photo extends React.Component{
             <figcaption><p>{post.description}</p></figcaption>
             <div className="button-container">
                 <button 
-                onClick={()=>{this.props.onRemovePhoto(post)}}
+                onClick={()=>{
+                    this.props.removePost(this.props.post.id)
+                }}
                 >Remove</button>
             </div>
         </figure>

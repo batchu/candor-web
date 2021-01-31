@@ -12,7 +12,7 @@ class Photowall extends Component{
             {this.props.posts.sort((x,y)=>{
                 return y.id-x.idnnnn
             }).map(
-             (p,index) => <Photo onRemovePhoto={this.props.onRemovePhoto} post={p} key={index} /> 
+             (p,index) => <Photo post={p} key={index} {...this.props} /> 
                
             )}
         </div>
