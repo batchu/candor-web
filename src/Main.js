@@ -27,10 +27,7 @@ class Main extends Component{
         render = {
             ({history})=>(
               
-                    <AddPhoto onAddPhoto = {(post)=> {
-                        this.onAddPhoto(post)
-                        history.push('/')
-                    }} />
+                    <AddPhoto {...this.props} history={history}/>
                 
             )
         }/>

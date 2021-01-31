@@ -5,7 +5,7 @@ export function removePost(id){
     }
 }
 
-function addPost(post){
+export function addPost(post){
     return {
         type: 'ADD_POST',
         post: post

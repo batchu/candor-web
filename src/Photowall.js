@@ -10,7 +10,7 @@ class Photowall extends Component{
             <Link className = "addIcon" to="/AddPhoto"> </Link> 
             <div className="photo-grid">
             {this.props.posts.sort((x,y)=>{
-                return y.id-x.idnnnn
+                return y.id-x.id
             }).map(
              (p,index) => <Photo post={p} key={index} {...this.props} /> 
                
