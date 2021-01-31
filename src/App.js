@@ -24,10 +24,7 @@ class App extends React.Component{
           </div>
         </div>
       </nav>
-
-      <div className="auth-wrapper">
-        <div className="auth-inner">
-        <Switch>
+      <Switch>
                 <Route path="login">
                     <Login />
                 </Route>
@@ -38,8 +35,7 @@ class App extends React.Component{
                     <Login />
                 </Route>
             </Switch>
-        </div>
-      </div>
+      
     </div>
             
         </Router>

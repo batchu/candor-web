@@ -6,7 +6,9 @@ class Login extends React.Component {
 
     render (){
 
-        return <form>
+        return <div className="auth-wrapper">
+        <div className="auth-inner">
+        <form>
         <h3>Login</h3>
 
         <button class="loginBtn loginBtn--facebook">
@@ -17,6 +19,8 @@ class Login extends React.Component {
   Login with Google
 </button>
     </form>
+        </div>
+      </div>
     }
 }
 
