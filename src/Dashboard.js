@@ -5,12 +5,8 @@ import Button from 'react-bootstrap/Button';
 
 class Dashboard extends React.Component{
     render(){
-        return <div>
+        return <div className="dashboard-wrapper">
             <h1>Dashboard</h1>
-            <Button className="glyphicon glyphicon-cogwheel settingsIcon" >
-            
-                </Button>
-        
             <IssueList />
             <Button  className="glyphicon glyphicon-circle-empty-plus newIssue" />
            

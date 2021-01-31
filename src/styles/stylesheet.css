@@ -2,11 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 
-* {
-  box-sizing: border-box;
-}
+
 body {
-  background: #1C8EF9 !important;
+  background: white !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -18,6 +16,7 @@ h1,h2,h3,h4,h5,h6,label,span {
   font-family: 'Fira Sans', sans-serif;
 }
 
+
 body, html, .App, #root, .auth-wrapper {
   width: 100%;
   height: 100%;
@@ -28,7 +27,14 @@ body, html, .App, #root, .auth-wrapper {
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
 }
 
-.auth-wrapper {
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+}
+.auth-wrapper  {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -125,6 +131,10 @@ body, html, .App, #root, .auth-wrapper {
     position: absolute;
     bottom: 50px;
     right: 50px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: none;
 }
 .switch {
     position: absolute;
@@ -182,10 +192,9 @@ body, html, .App, #root, .auth-wrapper {
   }
 
 table {
-    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 60%;
-    margin-top: 125px;
+    margin-top: 10px;
     margin-left: 260px;
   }
   
@@ -193,7 +202,8 @@ table {
     border: 1px solid #110101;
     text-align: center;
     padding: 8px;
-    background-color:darkseagreen;
+    background-color:rgb(219, 213, 213);
+
   }
  td.content{
      width:80%;
@@ -209,3 +219,6 @@ table {
       background-color: #f2eeed;
   }
  
+.dashboard-wrapper{
+  align-items:baseline;
+}
