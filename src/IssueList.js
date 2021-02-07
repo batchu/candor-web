@@ -5,7 +5,8 @@ class IssueList extends React.Component {
     render() {
         return <div className="issue-list">
             <label className="switch">
-                <div className="slider "></div>
+                <input type="checkbox" />
+                <span className="slider round"></span>
             </label>
             <table id="issueTable">
                 <tr>
@@ -15,16 +16,14 @@ class IssueList extends React.Component {
                 </tr>
                 <tr>
                     <td>
-                        <div className="content">Unable to add new phone line</div>
-                        <div className="editIcon">   <button className="glyphicon glyphicon-edit" /></div>
+                        <div className="content">Unable to add new phone line.<div className="editIcon"><button className="glyphicon glyphicon-edit" /></div></div>
                     </td>
                     <td>AT&T</td>
                     <td>Today</td>
                 </tr>
                 <tr>
-                    <td><div className="content">Xbox live account is diabled</div>
-                        <div className="editIcon">  <button className="glyphicon glyphicon-edit" />
-
+                    <td>
+                    <div className="content">Xbox live account is disabled. <div className="editIcon">  <button className="glyphicon glyphicon-edit" /></div>
                         </div></td>
                     <td>Microsoft</td>
                     <td>2 days ago</td>
