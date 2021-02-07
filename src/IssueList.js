@@ -23,7 +23,7 @@ class IssueList extends React.Component {
                 </tr>
                 <tr>
                     <td>
-                    <div className="content">Xbox live account is disabled. <div className="editIcon">  <button className="glyphicon glyphicon-edit" /></div>
+                        <div className="content">Xbox live account is disabled. <div className="editIcon">  <button className="glyphicon glyphicon-edit" /></div>
                         </div></td>
                     <td>Microsoft</td>
                     <td>2 days ago</td>
