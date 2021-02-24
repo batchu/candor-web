@@ -1,48 +1,47 @@
-import  React, {Component} from 'react'
+import React, { Component } from 'react'
 import Title from './Title'
 import PhotoWall from './PhotoWall'
 import AddPhoto from './AddPhoto'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-  } from "react-router-dom";
-import {removePost} from './redux/actions'
-class Main extends Component{
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { removePost } from './redux/actions'
+class Main extends Component {
 
-    constructor(){
+  constructor() {
 
-        super()
-       
-    }
+    super()
+  }
 
-    render(){
-       console.log(this.props)
-     
-        return   <Router>
+  render() {
+    console.log(this.props)
+
+    return <Router>
       <div>
-      <Title />
+        <Title />
         <Switch>
-        <Route  path="/AddPhoto" 
-        render = {
-            ({history})=>(
-              
-                    <AddPhoto {...this.props} history={history}/>
-                
-            )
-        }/>
-          <Route path="/" 
-          render = {
-              ()=>(
-                <PhotoWall {...this.props}/>
+          <Route path="/AddPhoto"
+            render={
+              ({ history }) => (
+
+                <AddPhoto {...this.props} history={history} />
+
               )
-          }
+            } />
+          <Route path="/"
+            render={
+              () => (
+                <PhotoWall {...this.props} />
+              )
+            }
           />
-         
+
         </Switch>
       </div>
     </Router>
-    }
+  }
 
 }
 
