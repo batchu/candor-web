@@ -18,3 +18,10 @@ export function updatePost(post){
         payload: post
     }
 }
+
+export function addComment(comment){
+    return {
+        type: 'ADD_COMMENT',
+        payload: comment
+    }
+}

@@ -1,4 +1,5 @@
-import posts from '../data/posts'
+import postsData from '../data/posts'
+import {combineReducers} from 'redux'
 /*
 Job of a Reducer:
 1. Input: Takes an action and the current state
@@ -6,8 +7,7 @@ Job of a Reducer:
     It does NOT modify the current state but makes a fresh copy
 3. Output: New state with modifications included 
 */
-const rootReducer = (state=posts, action)=> {
-    console.log(action.id)
+function posts(state=postsData, action) {
     switch(action.type){
 
         case 'REMOVE_POST':
@@ -33,4 +33,12 @@ const rootReducer = (state=posts, action)=> {
    
 }
 
+const comments = function comments(state=[], action){
+    switch(action.type){
+        case 'ADD_COMMENT': return state.concat(action.payload)
+        default: return state
+    }
+}
+
+const rootReducer = combineReducers({posts, comments})
 export default rootReducer

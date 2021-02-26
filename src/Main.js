@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Title from './Title'
 import PhotoWall from './PhotoWall'
 import AddPhoto from './AddPhoto'
+import Single from './Single'
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,6 +31,7 @@ class Main extends Component {
 
               )
             } />
+          <Route path="/single/:id" render = {(params )=> (<Single {...this.props} {...params} />)}/>
           <Route path="/"
             render={
               () => (
@@ -37,6 +39,7 @@ class Main extends Component {
               )
             }
           />
+         
 
         </Switch>
       </div>
