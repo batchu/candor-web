@@ -9,7 +9,7 @@ export function startAddingPost(post){
     }
 }
 
-export function startLoadingPost(){
+export function startLoadingPosts(){
     return (dispatch) =>{
         return database.ref('posts').once('value').then((snapshot)=>{
             const posts = []
@@ -22,10 +22,30 @@ export function startLoadingPost(){
     }
 }
 
+export function startLoadingComments(){
+    return (dispatch) => {
+        return database.ref('comments').once('value').then((snapshot)=>{
+            const comments = []
+            snapshot.forEach((childSnapshot)=>{
+                comments.push(childSnapshot.toJSON())
+            })
+            dispatch(loadComments(comments))
+        })
+    }
+}
+
 export function startRemovingPost( id){
     return(dispatch)=>{
         return database.ref(`posts/${id}`).remove().then(()=>{
             dispatch(removePost(id))
+        })
+    }
+}
+
+export function startAddingComment(comment){
+    return (dispatch)=>{
+        return database.ref('comments').update({[comment.id]:comment}).then(()=>{
+            dispatch(addComment(comment))
         })
     }
 }
@@ -34,6 +54,13 @@ export function loadPosts(posts){
             type: 'LOAD_POSTS',
             posts: posts
         }
+}
+
+export function loadComments(comments){
+    return {
+        type: 'LOAD_COMMENTS',
+        comments: comments
+    }
 }
 export function removePost(id){
     return {
