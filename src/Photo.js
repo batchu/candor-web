@@ -11,8 +11,9 @@ class Photo extends React.Component{
             <div className="button-container">
                 <button 
                 onClick={()=>{
-                    this.props.removePost(this.props.post.id)
-                    this.props.history.push('/')
+                    this.props.startRemovingPost( this.props.post.id)
+                    if(this.props.history)
+                        this.props.history.push('/')
                 }}
                 >Remove</button>
                 <Link className="button" to={`/single/${post.id}`}>
