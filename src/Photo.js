@@ -15,6 +15,12 @@ class Photo extends React.Component{
                     this.props.history.push('/')
                 }}
                 >Remove</button>
+                <Link className="button" to={`/single/${post.id}`}>
+                    <div className="comment-count">
+                        <div className="speech-bubble"></div>
+                        {this.props.comments[post.id]? this.props.comments[post.id].length: 0}
+                    </div>
+                </Link>
             </div>
         </figure>
     }

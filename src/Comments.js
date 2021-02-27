@@ -10,6 +10,7 @@ class Comments extends Component{
             event.preventDefault()
             const comment = {id:Number(this.props.id),comment: event.target.elements.comment.value}
             this.props.addComment(comment)
+            event.target.elements.comment.value=''
 
     }
     render(){
