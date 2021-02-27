@@ -12,10 +12,12 @@ import { removePost } from './redux/actions'
 class Main extends Component {
 
   constructor() {
-
     super()
   }
 
+  componentDidMount(){
+    this.props.startLoadingPost()
+  }
   render() {
     return <Router>
       <div>

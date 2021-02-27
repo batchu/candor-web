@@ -1,3 +1,33 @@
+import {database} from '../database/config'
+export function startAddingPost(post){
+    return (dispatch)=>{
+        return database.ref('posts').update({[post.id]:post}).then(()=>{
+            dispatch(addPost(post))
+        }).catch((error)=>{
+            console.log(error)
+        })
+    }
+}
+
+export function startLoadingPost(){
+    return (dispatch) =>{
+        return database.ref('posts').once('value').then((snapshot)=>{
+            const posts = []
+            snapshot.forEach((childSnapshot)=>{
+                posts.push(childSnapshot.toJSON())
+            })
+            dispatch(loadPosts(posts))
+        })
+
+    }
+}
+
+export function loadPosts(posts){
+        return {
+            type: 'LOAD_POSTS',
+            posts: posts
+        }
+}
 export function removePost(id){
     return {
         type: 'REMOVE_POST',

@@ -17,7 +17,7 @@ class AddPhoto extends React.Component{
             imageLink: link
         }
         if(link && description){
-            this.props.addPost(post)
+            this.props.startAddingPost(post)
             this.props.history.push('/')
 
         }

@@ -9,6 +9,8 @@ Job of a Reducer:
 */
 function posts(state=postsData, action) {
     switch(action.type){
+        case 'LOAD_POSTS':
+            return action.posts
 
         case 'REMOVE_POST':
             return state.filter((p)=>p.id!=action.payload)
