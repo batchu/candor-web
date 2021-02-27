@@ -15,7 +15,7 @@ class Comments extends Component{
     render(){
         return <div className="comment">
            {
-               this.props.comments[this.props.id] && this.props.comments[this.props.id].map((value,key)=>{
+               this.props.comments.map((value,key)=>{
                 return (<p key={key}>{value}</p>)
             })
 

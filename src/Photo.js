@@ -12,6 +12,7 @@ class Photo extends React.Component{
                 <button 
                 onClick={()=>{
                     this.props.removePost(this.props.post.id)
+                    this.props.history.push('/')
                 }}
                 >Remove</button>
             </div>
