@@ -8,20 +8,18 @@ class Comments extends Component{
     }
     handleSubmit(event){
             event.preventDefault()
-            const comment = event.target.elements.comment.value
-            console.log(comment)
+            const comment = {id:Number(this.props.id),comment: event.target.elements.comment.value}
             this.props.addComment(comment)
 
     }
     render(){
         return <div className="comment">
-            {
-                this.props.comments.map((comment, index) => {
-                    return (
-                        <p key={index}>{comment}</p>
-                    )
-                })
-            }
+           {
+               this.props.comments[this.props.id] && this.props.comments[this.props.id].map((value,key)=>{
+                return (<p key={key}>{value}</p>)
+            })
+
+           }
                 <form className="comment-form" onSubmit={this.handleSubmit}>
                     <input name = "comment" type="text" placeholder="comment" />
                     <input type="submit"/>

@@ -35,7 +35,11 @@ function posts(state=postsData, action) {
 
 const comments = function comments(state=[], action){
     switch(action.type){
-        case 'ADD_COMMENT': return state.concat(action.payload)
+        case 'ADD_COMMENT': 
+                    if(!state[action.payload.id]){
+                        return {...state, [action.payload.id]:[action.payload.comment]}
+                    }
+                        return {...state, [action.payload.id]: [...state[action.payload.id], action.payload.comment] }
         default: return state
     }
 }
