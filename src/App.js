@@ -1,6 +1,6 @@
 import React from 'react'
 import IssueList from './IssueList'
-import Login from './Login'
+import Login from './login/Login'
 import Dashboard from './Dashboard'
 import Settings from './Settings'
 import {
@@ -28,9 +28,14 @@ class App extends React.Component {
                 </nav>
                 <div className="main-wrapper">
                 <Switch>
-                    <Route path="/login">
-                        <Login />
-                    </Route>
+                    <Route path="/login" 
+                    render = {
+                        ({history})=> (
+                            <Login {...this.props} history={history} />
+                        )
+                    }
+                    />
+                      
                     <Route path="/dashboard">
                         <Dashboard />
                     </Route>

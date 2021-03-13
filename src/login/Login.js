@@ -1,4 +1,5 @@
 import React from 'react'
+import GoogleLoginButton from './GoogleLoginButton'
 
 
 
@@ -11,13 +12,11 @@ class Login extends React.Component {
         <form>
           <h3>Login</h3>
 
-          <button class="loginBtn loginBtn--facebook">
-            Login with Facebook
+          <button className="loginBtn loginBtn--facebook">
+            Facebook
 </button>
 
-          <button class="loginBtn loginBtn--google">
-            Login with Google
-</button>
+          <GoogleLoginButton {...this.props} />
         </form>
       </div>
     </div>
