@@ -8,6 +8,19 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
+
+.logo{
+background-image: url("https://lh3.googleusercontent.com/FHafrv5Un1mhGcjHMVjopE5ut3oZNkmP_HRR9kLpfU6qoJiURrB1agyHjW-4XxzSmF53UsluPRHfYFkCdMBehC68pRiNr0q_qMpU-7AKvfd_9jgP2KXDKuo4xNBI1R40vG9rzHV2eTGcNt1EidtAHTmQrtDfww8ykAVXQXX9u2HNib4SKvFUps-bjs2YenpSOLnorqyWrurhjyh_uTxtgEErBoQ7ePIDrTjp6-nkQKKaawT-U6OAC7dGOQ1HhKBGyTIHZOkR3grFM9BYosaToxFS9Gq4b2wlRSujyCaRMdkVMMRVkKa0REhXTjnD-uKuhkbH-M7RoERrUx_EO3odKPBxb5qdwfJ-oHtP21RHmCLXjgYY68gEc3VrOhhGJKwiP7UC5zFZK2TvJCHb2bYqfVQBD_SjGlFILjUI20i-GLUIJFXxn08TDVFlVg8T-dcURNHpbmJ1jAiD9IeYIn4SA6mN05CG9sDbEett7uPjFFQccgwO_L3k7XG_ti0kJjnKub26ovIrGWRRWLxf2cPvxWLztArgN7Q7fbxe_Zz7UaQkkWp0jivNBJ6RK3VQjoua-S3EgiXGrhBY_0G6iQGsBjhQvDlciRfXKrqxvoi3SxW6PS0BJUUmGMJuot_GP3NyIlUuh4YRjLzeLc-UefsYRtkKqyUwQGSpVvtDentIzrEHV0ON-HT2tP0Gr7HQ__vP-sB3lPDvwTtd0sBO8yFhvD-AbQ=w1560-h594-no?authuser=0");
+background-repeat: no-repeat;
+      background-size: cover;
+      padding: 0px;
+      float: left;
+      margin: -10px;
+      width: 150px;
+      height: 60px;
+      text-indent: -9999px; 
+}
+
 h1,
 h2,
 h3,
