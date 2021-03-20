@@ -1,6 +1,5 @@
 import React from 'react'
 import GoogleLogin from 'react-google-login'
-import { loginUser } from '../redux/actions'
 import {withRouter  } from 'react-router-dom'
 import Cookies from 'universal-cookie';
 class GoogleLoginButton extends React.Component{
@@ -13,8 +12,8 @@ class GoogleLoginButton extends React.Component{
     onSuccess = (response) => {
         console.log(response)
         this.cookies.set('access_token',response.accessToken, { path: '/' })
-        loginUser(response.profileObj)
-        this.props.history.push('/dashboard')
+        this.props.ssdfsdf(response.profileObj)
+        // this.props.history.push('/dashboard')
       }
     onFailure = (response) => {
         console.log(response)

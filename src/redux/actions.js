@@ -1,7 +1,14 @@
 export function loginUser(user){
     return {
-        type: 'LOGIN_USER',
+        type: 'user/login',
         payload: user
     }
+}
 
+export function updateSettings(settings){
+    return {
+        type: 'settings/update',
+        payload: settings
+
+    }
 }
