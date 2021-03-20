@@ -16,7 +16,8 @@ class Main extends Component {
   }
 
   componentDidMount(){
-    this.props.startLoadingPost()
+    this.props.startLoadingPosts()
+    this.props.startLoadingComments()
   }
   render() {
     return <Router>
