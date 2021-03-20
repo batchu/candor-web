@@ -1,14 +1,15 @@
-export function loginUser(user){
-    return {
-        type: 'user/login',
-        payload: user
-    }
-}
+export const  userLoginGoogle = (user)=> ( {
+    type: 'user/login/google',
+    payload: user
+})
 
-export function updateSettings(settings){
-    return {
-        type: 'settings/update',
-        payload: settings
+export const  userLoginFacebook = (user)=> ( {
+    type: 'user/login/facebook',
+    payload: user
+})
 
-    }
-}
+export const  settingsUpdate= (settings)=> ({
+    type: 'settings/update',
+    payload: settings
+
+})

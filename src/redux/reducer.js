@@ -1,21 +1,20 @@
 import {combineReducers} from 'redux'
- function userReducer(state={}, action){
+ const user = (state={}, action)=>{
 
     switch(action.type){
-        case 'user/login': return {...state, user: {...action.payload}}
+        case 'user/login/google': return  {user:{...action.payload,type:'google'}}
+        case 'user/login/facebook': return  {...action.payload,type:'facebook'}
         default: return state
             
     }
 }
 
-
- function settingsReducer(state={}, action){
-
+ const  settings = (state={}, action)=>{
     switch(action.type){
         case 'settings/update':
         default:
-            return {...state, user: {...action.payload}}
+            return state
     }
 }
-const rootReducer = combineReducers({userReducer, settingsReducer})
+const rootReducer = combineReducers({user, settings})
 export default rootReducer

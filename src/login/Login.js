@@ -12,7 +12,6 @@ class Login extends React.Component {
       <div className="auth-inner">
         <form>
           <h3>Login</h3>
-
           <FaceBookLoginButton {...this.props} />
 
           <GoogleLoginButton {...this.props} />

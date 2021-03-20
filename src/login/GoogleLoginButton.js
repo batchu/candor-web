@@ -1,19 +1,19 @@
 import React from 'react'
 import GoogleLogin from 'react-google-login'
 import {withRouter  } from 'react-router-dom'
-import Cookies from 'universal-cookie';
+import CookieHelper from '../helpers/CookieHelper'
 class GoogleLoginButton extends React.Component{
-   cookies = new Cookies()
     constructor(){
         super()
         this.onSuccess = this.onSuccess.bind(this)
         this.onFailure = this.onFailure.bind(this)
+      
     }
     onSuccess = (response) => {
         console.log(response)
-        this.cookies.set('access_token',response.accessToken, { path: '/' })
-        this.props.ssdfsdf(response.profileObj)
-        // this.props.history.push('/dashboard')
+        CookieHelper.set('access_token',response.accessToken, { path: '/' })
+        this.props.userLoginGoogle(response.profileObj)
+         this.props.history.push('/dashboard')
       }
     onFailure = (response) => {
         console.log(response)

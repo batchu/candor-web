@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import Issue from './Issue'
+import React from 'react'
 
 class IssueList extends React.Component {
     render() {

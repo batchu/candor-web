@@ -1,5 +1,4 @@
 import React from 'react'
-import Issue from './Issue'
 import IssueList from './IssueList'
 import Button from 'react-bootstrap/Button';
 

@@ -11,7 +11,7 @@ export default class FaceBookLoginButton extends Component {
        return <FacebookLogin
           
             appId="459636018789965"
-            autoLoad
+            
             callback={this.responseFacebook}
             render={renderProps => (
                 <button   className="loginBtn loginBtn--facebook" onClick={renderProps.onClick}>Facebook</button>

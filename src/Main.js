@@ -1,8 +1,6 @@
 import React from 'react'
-import IssueList from './IssueList'
 import Login from './login/Login'
 import Dashboard from './Dashboard'
-import Settings from './Settings'
 import {
     BrowserRouter as Router,
     Switch,
@@ -16,12 +14,13 @@ export default class Main extends React.Component {
             <div className="App">
                 <nav className="navbar navbar-expand-lg navbar-light fixed-top">
                     <div className="container">
-                        <Link className="navbar-brand" to={"/login"}>Candor</Link>
+                        <Link className="navbar-brand" to={"/login"}><h1>Candor</h1></Link>
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
                                     <Link className="nav-link" to={"/login"}>Login</Link>
                                 </li>
+                            
                             </ul>
                         </div>
                     </div>
@@ -36,12 +35,18 @@ export default class Main extends React.Component {
                     }
                     />
                       
-                    <Route path="/dashboard">
-                        <Dashboard />
-                    </Route>
-                    <Route path="/">
-                        <Login />
-                    </Route>
+                    <Route path="/dashboard"
+                       render = {
+                           ({history})=>(
+                               <Dashboard {...this.props} history={history} />
+                           )
+                       }
+                    />
+                    <Route path="/"  render={
+                        ({history})=> (
+                            <Login {...this.props} history={history} />
+                        )
+                    }/>
                 </Switch>
                 </div>
 

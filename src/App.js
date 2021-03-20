@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as actions from './redux/actions'
 function mapStateToProps(state){
+    console.log(`state is ${state}`)
     return {
         user: state.user,
         settings:state.settings
