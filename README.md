@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Clone the project `git clone https://github.com/batchu/elysian-web` and `cd elysian-web`
 - Run the command in candor-web folder `npm install`
 - Start the project 'npm run start`, open http://localhost:3000 on your browser
-
+- Start mongodb `mongod --dbpath=C:\Downloads\mongodb-win32-x86_64-windows-4.4.5\data   --port=27017`
 
 ## Essential GIT commands
 
