@@ -1,4 +1,4 @@
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
+
 import { Helmet } from 'react-helmet';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -17,14 +17,19 @@ import GoogleLoginButton  from "../components/login/GoogleLoginButton";
 import GoogleLogin from "react-google-login";
 import React from "react";
 import CookieHelper from "../components/helpers/CookieHelper";
+import {bindActionCreators} from "redux";
+import * as actions from "../redux/actions";
+import {connect} from "react-redux";
+import {useNavigate} from 'react-router-dom';
 
-const Login = () => {
+
+const Login = (props) => {
   const navigate = useNavigate();
- const onSuccess =(response) => {
+  const onSuccess =(response) => {
     console.log(response)
     CookieHelper.set('access_token',response.accessToken, { path: '/' })
-    this.props.userLoginGoogle(response.profileObj)
-    this.props.history.push('/dashboard')
+    props.userLoginGoogle(response.profileObj)
+    navigate('/app/dashboard')
   }
  const onFailure = (response) => {
     console.log(response)
@@ -129,5 +134,16 @@ const Login = () => {
     </>
   );
 };
+function mapStateToProps(state){
+  console.log(`state is ${state}`)
+  return {
+    user: state.user,
+    settings:state.settings
+  }
+}
 
-export default Login;
+function mapDispatchToProps(dispatch){
+  return bindActionCreators(actions, dispatch)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
+
