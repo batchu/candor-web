@@ -23,7 +23,7 @@ We also have a pro version of this product which bundles even more pages and com
 ## Demo
 
 - [Dashboard Page](https://material-kit-react.devias.io/app/dashboard)
-- [Users Page](https://material-kit-react.devias.io/app/customers)
+- [Users Page](https://material-kit-react.devias.io/app/requests)
 - [Products Page](https://material-kit-react.devias.io/app/products)
 - [Register Page](https://material-kit-react.devias.io/register)
 - [Login Page](https://material-kit-react.devias.io/login)
