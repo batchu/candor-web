@@ -7,7 +7,7 @@ import requests from 'src/__mocks__/requests';
 const RequestList = () => (
   <>
     <Helmet>
-      <title>Requests | Material Kit</title>
+      <title>Requests</title>
     </Helmet>
     <Box
       sx={{

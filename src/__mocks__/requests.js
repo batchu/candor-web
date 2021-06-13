@@ -7,6 +7,7 @@ export default [
     createdAt: 'today',
     request: 'Cancel flight itinerary HXCAA',
     company: 'Delta',
+    status: 'In progress'
   },
   {
     id: uuid(),
@@ -14,6 +15,7 @@ export default [
     createdAt: 'yesterday',
     request: 'Macbook battery replacement',
     company: 'Apple',
+    status: 'Resolved'
   },
   {
     id: uuid(),
@@ -21,6 +23,7 @@ export default [
     createdAt: '5 days ago',
     request: 'Mobile plan Military discount',
     company: 'AT&T',
+    status: 'Need Information'
   },
   {
     id: uuid(),
@@ -28,5 +31,6 @@ export default [
     createdAt: '5 days ago',
     request: 'Change shipping address for #301601',
     company: 'Home Depot',
+    status: 'Reopened'
   }
 ];

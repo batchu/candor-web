@@ -24,8 +24,8 @@ import NavItem from './NavItem';
 
 const user = {
   avatar: '/static/images/avatars/avatar_6.png',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
+  jobTitle: 'Jedi user',
+  name: 'Jane Doe'
 };
 
 const items = [
@@ -53,16 +53,6 @@ const items = [
     href: '/app/settings',
     icon: SettingsIcon,
     title: 'Settings'
-  },
-  {
-    href: '/login',
-    icon: LockIcon,
-    title: 'Login'
-  },
-  {
-    href: '/register',
-    icon: UserPlusIcon,
-    title: 'Register'
   },
   {
     href: '/404',
@@ -145,13 +135,13 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
           gutterBottom
           variant="h4"
         >
-          Need more?
+          Need help?
         </Typography>
         <Typography
           align="center"
           variant="body2"
         >
-          Upgrade to PRO version and access 20 more screens
+         Create a request for support
         </Typography>
         <Box
           sx={{
@@ -166,7 +156,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
             href="https://react-material-kit.devias.io"
             variant="contained"
           >
-            See PRO version
+            Request
           </Button>
         </Box>
       </Box>

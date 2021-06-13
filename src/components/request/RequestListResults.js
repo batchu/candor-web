@@ -89,6 +89,9 @@ const RequestListResults = ({ requests, ...rest }) => {
                 <TableCell>
                   created
                 </TableCell>
+                <TableCell>
+                  status
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -132,6 +135,9 @@ const RequestListResults = ({ requests, ...rest }) => {
                   </TableCell>
                   <TableCell>
                     {customer.createdAt}
+                  </TableCell>
+                  <TableCell>
+                    {customer.status}
                   </TableCell>
                 </TableRow>
               ))}
